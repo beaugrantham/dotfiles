@@ -1,9 +1,9 @@
 source "gpg -d ~/.mutt/org/nologs/beau/passwords.gpg |"
 
-# set imap_pass = "password"
-# set smtp_pass = "password"
+# set imap_pass = "password"                                           # contained within passwords.gpg
+# set smtp_pass = "password"                                           # contained within passwords.gpg
 
-set ssl_starttls        = "yes"
+set ssl_starttls        = "no"
 set ssl_force_tls       = "yes"
 
 set editor              = "vim"
@@ -12,15 +12,13 @@ set from                = "beau@nologs.org"
 set realname            = "Beau Grantham"
 set edit_headers        = yes
 
-set record              = "/dev/null"
-
-# Gmail info
 set imap_user           = "beau@nologs.org"
 set imap_keepalive      = 30
 unset imap_passive                                                     # allow mutt to open new imap connection automatically
-set folder              = "imaps://imap.gmail.com"
-set spoolfile           = "+[Gmail]/All Mail"
-set postponed           = "+[Gmail]/Drafts"
+set folder              = "imaps://imap.fastmail.com/"
+set spoolfile           = "=INBOX"
+set postponed           = "=Drafts"
+set record              = "=Sent"
 set header_cache        = ~/.mutt/org/nologs/beau/headers
 set message_cachedir    = ~/.mutt/org/nologs/beau/bodies
 set certificate_file    = ~/.mutt/certificates
@@ -57,14 +55,13 @@ set smart_wrap                                                         # dont wr
 auto_view text/html                                                    # autoview html
 alternative_order text/plain text/enriched text/html                   # save html for last
 
-set sidebar_delim       = '│'
 set sidebar_visible     = yes
 set sidebar_width       = 24
 
 set status_chars        = " *%A"
 set status_format       = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
-mailboxes ='INBOX' ='[Gmail]/All Mail' ='[Gmail]/Drafts' ='[Gmail]/Sent Mail'
+mailboxes ='INBOX' ='Archive' ='Drafts' ='Sent' ='Spam' ='Trash'
 
 set pager_index_lines   = 10                                           # number of index lines to show
 set pager_context       = 5                                            # When going to the next page, keep the bottom two lines of this page on top so that I have some context
