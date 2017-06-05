@@ -22,7 +22,7 @@ set record              = "=Sent"
 set header_cache        = ~/.mutt/org/nologs/beau/headers
 set message_cachedir    = ~/.mutt/org/nologs/beau/bodies
 set certificate_file    = ~/.mutt/certificates
-set smtp_url            = "smtps://beau@nologs.org@smtp.gmail.com:465/"
+set smtp_url            = "smtps://beau@nologs.org@smtp.fastmail.com:465/"
 set move                = no                                           # Don't ask me to move messages out of my inbox when I quit.
 
 set quit                = ask-yes                                      # confirm before quitting
