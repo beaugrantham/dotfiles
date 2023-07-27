@@ -1,7 +1,0 @@
-[user]
-	name = Beau Grantham
-	email = beau@nologs.org
-[push]
-	default = simple
-[commit]
-	gpgsign = true

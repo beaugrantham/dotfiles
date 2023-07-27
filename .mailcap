@@ -1,7 +1,0 @@
-text/html; w3m -I %{charset} -T text/html; copiousoutput;
-#text/html; google-chrome %s; test=test "$DISPLAY" != ""
-image/gif; gm display -
-image/jpg; gm display -
-image/eps; gm display -
-application/postscript; gm display -
-application/pdf; evince /dev/stdin
