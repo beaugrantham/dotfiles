@@ -30,10 +30,9 @@ set scrolloff=2
 
 set modeline
 
-" vim :set ts=4 sw=4 sts=0 noet :
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set softtabstop=0
-set noexpandtab
+set expandtab
 
 let g:netrw_liststyle=3
